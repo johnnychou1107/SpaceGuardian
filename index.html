@@ -15,6 +15,18 @@
             align-items: center;
             height: 100vh;
         }
+
+        #mainWrapper {
+            display: flex;
+            align-items: flex-start; 
+            gap: 40px; 
+        }
+
+        .sidebar {
+            width: 220px;
+            line-height: 1.6;
+        }
+
         #gameContainer {
             position: relative;
             box-shadow: 0 0 20px rgba(0, 255, 255, 0.5); 
@@ -33,12 +45,29 @@
 </head>
 <body>
 
-<div id="gameContainer">
-    <canvas id="gameCanvas" width="800" height="600"></canvas>
-    <div id="uiLayer">
-        <div>Score: <span id="scoreVal">0</span></div>
-        <div>HP: <span id="hpVal">100</span>%</div>
-        <div id="shopHint" style="margin-top:10px; color: yellow; font-size: 0.8em;">Press 'P' for Shop</div>
+<div id="mainWrapper">
+    <div class="sidebar">
+        <h2>操作說明</h2>
+        <p>移動：WASD / 方向鍵</p>
+        <p>射擊：空白鍵</p>
+        <p>商店：P 鍵</p>
+    </div>
+
+    <div id="gameContainer">
+        <canvas id="gameCanvas" width="800" height="600"></canvas>
+        <div id="uiLayer">
+            <div>Score: <span id="scoreVal">0</span></div>
+            <div>HP: <span id="hpVal">100</span>%</div>
+            <div id="shopHint" style="margin-top:10px; color: yellow; font-size: 0.8em;">Press 'P' for Shop</div>
+        </div>
+    </div>
+
+    <div class="sidebar">
+        <h2>遊玩方法</h2>
+        <p>A.P 鍵暫停並進入商店，使用積分購買「武器升級」、「速度提升」或「緊急維修」</p>
+        <p>B.隨著武器等級提升，子彈會由單發進化為多角度散射 </p>
+        <p>C.擊敗敵人有機率掉落補給品（HP 恢復或護盾）</p>
+        <p>D.取得護盾後可免疫一次傷害</p>
     </div>
 </div>
 
