@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+    <meta charset="UTF-8">
+    <title>Term Project: Galaxy Guardian</title>
+    <style>
+        body {
+            margin: 0;
+            background-color: #1a1a1a;
+            color: white;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            overflow: hidden; 
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+        #gameContainer {
+            position: relative;
+            box-shadow: 0 0 20px rgba(0, 255, 255, 0.5); 
+        }
+        canvas {
+            background-color: #000;
+            display: block;
+        }
+        #uiLayer {
+            position: absolute;
+            top: 10px;
+            left: 10px;
+            pointer-events: none; 
+        }
+    </style>
+</head>
+<body>
+
+<div id="gameContainer">
+    <canvas id="gameCanvas" width="800" height="600"></canvas>
+    <div id="uiLayer">
+        <div>Score: <span id="scoreVal">0</span></div>
+        <div>HP: <span id="hpVal">100</span>%</div>
+        <div id="shopHint" style="margin-top:10px; color: yellow; font-size: 0.8em;">Press 'P' for Shop</div>
+    </div>
+</div>
+
+<script src="game.js"></script>
+</body>
+</html>
